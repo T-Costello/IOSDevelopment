@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="SyV-Fa-YQ5">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller - PhotoFX-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="44" width="768" height="980"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XUh-lG-UDe">
+                                <rect key="frame" x="0.0" y="-98" width="768" height="980"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.48627454042434692" green="0.59607845544815063" blue="0.51764708757400513" alpha="1" colorSpace="deviceRGB"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="PhotoFX" id="KcY-Ru-ClP">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="JOM-Kh-qs0" userLabel="Save">
+                            <connections>
+                                <action selector="saveImageToAlbum" destination="BYZ-38-t0r" id="Jyi-22-Mc4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="selectedImageView" destination="XUh-lG-UDe" id="hoC-D3-ynl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" id="5Yb-55-whK">
+                    <rect key="frame" x="0.0" y="0.0" width="917" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem title="Album" id="zeu-KD-cSp">
+                            <connections>
+                                <action selector="photoFromAlbum" destination="BYZ-38-t0r" id="Tb0-6Y-vN1"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem systemItem="camera" id="aun-Oh-hc8">
+                            <connections>
+                                <action selector="photoFromCamera" destination="BYZ-38-t0r" id="1Tj-9d-NyW"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="Filter" id="pzo-E8-aej">
+                            <connections>
+                                <action selector="applyImageFilter:" destination="BYZ-38-t0r" id="TYc-Tt-xb7"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="Item" id="XgS-Rq-vbf"/>
+                    </items>
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="Rwb-9w-R0Z"/>
+                    </connections>
+                </toolbar>
+                <navigationBar contentMode="scaleToFill" barStyle="black" translucent="NO" id="ru3-cH-sUf">
+                    <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                </navigationBar>
+            </objects>
+            <point key="canvasLocation" x="1023" y="-158"/>
+        </scene>
+        <!--Navigation Controller - PhotoFX-->
+        <scene sceneID="oNd-PM-1nk">
+            <objects>
+                <navigationController title="PhotoFX" automaticallyAdjustsScrollViewInsets="NO" id="SyV-Fa-YQ5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="fIn-xv-H8r">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="YnT-aJ-szr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R9w-ZJ-ftu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="97" y="-158"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
